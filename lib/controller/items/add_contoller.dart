@@ -111,9 +111,10 @@ class ItemsAddController extends GetxController {
         List datalist = response['data'];
         data.addAll(datalist.map((e) => CategoriesModel.fromJson(e)));
         for (int i = 0; i < data.length; i++) {
-          dropDownList.add(SelectedListItem(
-              name: data[i].categoriesName!,
-              value: data[i].categoriesId.toString()));
+          dropDownList.add(SelectedListItem(data: data[i].categoriesName!));
+          // dropDownList.add(SelectedListItem(
+          //     name: data[i].categoriesName!,
+          //     value: data[i].categoriesId.toString()));
         }
       } else {
         statusRequest = StatusRequest.faillure;

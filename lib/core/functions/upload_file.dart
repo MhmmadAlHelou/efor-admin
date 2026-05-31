@@ -7,8 +7,10 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 imageUploadCamera() async {
-  final PickedFile? file = await ImagePicker()
-      .getImage(source: ImageSource.camera, imageQuality: 25);
+  final XFile? file = await ImagePicker()
+      .pickImage(source: ImageSource.camera, imageQuality: 25);
+  // final PickedFile? file = await ImagePicker()
+  //     .getImage(source: ImageSource.camera, imageQuality: 25);
   if (file != null) {
     print(file.path); //
 // /storage/emulated/0/Android/data/com.example.efor_admin/files/Pictures/scaled_edda197f-5c83-4d43-91e6-5609ad98696e998289375636786067.jpg

@@ -1,6 +1,5 @@
 class AppLink {
-  // static const String server = "http://192.168.43.94/efor";
-  static const String server = "http://192.168.1.105/efor";
+  static const String server = "http://192.168.1.104/efor";
   static const String imageStatic = "$server/upload";
   //__________Image___________//
   static const String imageCategories = "$imageStatic/categories";

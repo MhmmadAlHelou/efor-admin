@@ -29,7 +29,7 @@ class CardOrdersListAccepted extends GetView<OrdersAcceptedController> {
                 const Spacer(),
                 // Text(ordersModel.ordersDatetime!),
                 Text(
-                  Jiffy(ordersModel.ordersDatetime!, 'yyyy-MM-dd').fromNow(),
+                  Jiffy.parse(ordersModel.ordersDatetime!).fromNow(),
                   style: const TextStyle(
                       color: AppColor.white, fontWeight: FontWeight.bold),
                 ),

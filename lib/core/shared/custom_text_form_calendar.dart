@@ -30,9 +30,7 @@ class CustomTextFormCalendar extends StatelessWidget {
       lastDate: DateTime(2200),
     );
 
-    if (picked != null) {
-      myController.text = picked.toString().split(' ')[0];
-    }
+    myController.text = picked.toString().split(' ')[0];
   }
 
   @override

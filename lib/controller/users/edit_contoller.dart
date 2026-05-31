@@ -91,9 +91,12 @@ class UsersEditController extends GetxController {
     active = usersModel.usersApprove.toString();
 
     dropDownList.addAll([
-      SelectedListItem(name: 'clint', value: '1'),
-      SelectedListItem(name: 'delivery', value: '2'),
-      SelectedListItem(name: 'admin', value: '3'),
+      SelectedListItem(data: 'clint'),
+      SelectedListItem(data: 'delivery'),
+      SelectedListItem(data: 'admin'),
+      // SelectedListItem(name: 'clint', value: '1'),
+      // SelectedListItem(name: 'delivery', value: '2'),
+      // SelectedListItem(name: 'admin', value: '3'),
     ]);
 
     super.onInit();

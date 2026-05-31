@@ -23,7 +23,7 @@ class CustomDropDownList extends StatefulWidget {
 class _CustomDropDownListState extends State<CustomDropDownList> {
   void showDropDownSearch() {
     DropDownState(
-      DropDown(
+      dropDown: DropDown(
         // dropDownBackgroundColor: Colors.white,
         bottomSheetTitle: Text(
           widget.title,
@@ -43,8 +43,10 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
         data: widget.listData,
         onSelected: (List<dynamic> selectedList) {
           SelectedListItem selectedListItem = selectedList[0];
-          widget.dropDownSelectedName.text = selectedListItem.name;
-          widget.dropDownSelectedId.text = selectedListItem.value!;
+          widget.dropDownSelectedName.text = selectedListItem.data['name'];
+          widget.dropDownSelectedId.text = selectedListItem.data['value'];
+          // widget.dropDownSelectedName.text = selectedListItem.name;
+          // widget.dropDownSelectedId.text = selectedListItem.value!;
           print('===========');
           print(widget.dropDownSelectedId.text);
           print(widget.dropDownSelectedName.text);
